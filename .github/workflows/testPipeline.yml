@@ -1,6 +1,6 @@
 
 
-name: Verificação de Testes
+name: Verificação de Compilação e Testes
 
 on:
   [push]
