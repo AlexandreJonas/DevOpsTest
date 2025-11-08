@@ -1,0 +1,21 @@
+
+
+name: Verificação de Testes
+
+on:
+  [push]
+
+jobs:
+  Testes:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 21 for tests
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'zulu'
+      - name: Testes Unitários
+        run: mvn test
