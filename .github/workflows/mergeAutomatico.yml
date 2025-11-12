@@ -7,6 +7,9 @@ permissions:
     contents: write
     pull-requests: write
 
+env:
+  PR_NUMBER: ${{ github.event.number }}
+
 jobs:
   MergeAutomatico:
     runs-on: ubuntu-latest
@@ -21,7 +24,7 @@ jobs:
             uses: juliangruber/merge-pull-request-action@v1
             with:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
-                number: 3
+                number: ${{env.PR_NUMBER}}
                 method: merge
 
 
