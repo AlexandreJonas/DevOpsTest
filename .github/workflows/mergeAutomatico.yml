@@ -17,6 +17,6 @@ jobs:
             uses: juliangruber/merge-pull-request-action@v1
             with:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
-                number: 1
+                number: 2
                 method: merge
 
